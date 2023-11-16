@@ -3,9 +3,11 @@ module.exports = {
     browser: true,
     es2021: true,
   },
+  globals: { // C'est "globals" au pluriel ici
+    process: 'readonly',
+  },
   extends: [
     'eslint:recommended',
-    //"plugin:react/recommended"
     'plugin:vue/vue3-essential',
     'plugin:prettier/recommended',
   ],
@@ -24,6 +26,6 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react'],
+  plugins: ['vue'], // Si vous n'utilisez pas React dans ce projet, vous pouvez enlever 'react'
   rules: {},
 }
